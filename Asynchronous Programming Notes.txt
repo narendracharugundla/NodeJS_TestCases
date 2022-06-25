@@ -1,0 +1,118 @@
+Synchronous basically means that you cany only execute one thing at a time and  it's single threaded lanaguage
+
+Asynchronous means that you can execute multiple things at a time and you don't have to finish
+executing the current thing in order moven on to next one
+
+Callbacks vs Promises vs Async/Await
+All are same?
+
+Callbacks:"I will call back later !"
+
+A callback is a function passed as an arugument to another function.This technique allows a function to call another function.
+A callback function can run after another function has finished
+
+Practicals for callbacks solutions:
+Callback Hell-1
+Callback Hell-2
+Callback Hell-3(Using Promises)
+Callback Hell-4( Async and await)
+
+Promises:"I Prmise a Result"
+=====================
+
+"Producing code" is code that can take some time.
+"Consuming code" is a code that must wait for the result
+A Promise is a Javascript object that links producing code and consuming code
+
+Prmoises
+
+
+Available Promise state and values:
+====================================
+Pending(Undefined)
+Fullfilled(resloved value)
+Rejected (reason for rejection)
+
+
+Available Promise methods:
+==============================
+Promise.all([promises])
+Promise.allSettled([promises])
+Promise.any([promises])
+Promise.race([promises])
+
+Example:
+ const p1=Promise.resolve('Like if you Understand callbacks')      
+       const p2=100
+       const p3=new Promise((reslove,reject)=>{ 
+           setTimeout(reslove,1000,'Learn more concepts in node js like events,timers,streams,buffer,modules,web programming etc')
+        })
+        const p4=Promise.reject('Rejected').catch((error)=> console.log("error"));
+        //Promise.all([p1,p2,p3]).then((values)=> console.log(values))
+       //Promise.race([p1,p3,p3]).then((values)=> console.log(values))
+        //Promise.allSettled([p1,p3,p3]).then((values)=> console.log(values))
+        Promise.any([p4,p1]).then((values)=> console.log(values))
+		
+		
+What is the need of Async/Await?
+
+a)Async and await make promises easier to write
+b)Async makes a function return a promise
+c)Await makes a function  wait for a Promise and await will take the promise and converts to actival result.
+
+22 June 2022
+====================
+
+JavaScript is asynchronous in nature and so is Node. Asynchronous programming is a design pattern which ensures 
+the non-blocking code execution.
+What is callback hell?
+
+ Asynchronous nature of the JavaScript. We want to execute tasks which are dependent on each other 
+ hence we wrap them into the callbacks of each function and hence caught into callback hell situation.
+ 
+How to avoid callback hell
+To avoid callback hell, follow one or combination of the following :
+
+Modularise your code.
+Use generators.(Ex.setTimeOut(),readFile() etc)
+Use promises
+Use event-driven programming.
+Use Async.js
+
+
+The callback function is a closure and can only be accessed inside the function. 
+However you can create separate function by providing some name and pass that function as callback.
+
+Use promises
+Promise represents the result of asynchronous function. Promises can be used to avoid chaining of callbacks. 
+In Node.js, you can use Q or Bluebird modules to avail the feature of promise.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
